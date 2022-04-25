@@ -1,4 +1,4 @@
-//$(document).ready(function() {
+
 
     // <!-- Add Task -->
     var taskIdCounter = 0;
