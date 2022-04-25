@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    
 </head>
 <body>
     <!--Page title-->
@@ -15,69 +23,86 @@
     <!--Tabs and tab contents-->
     <section>
         <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'add-task')">Add Task</button>
-            <button class="tablinks" onclick="openTab(event, 'add-holiday')">Add Holiday</button>
-            <button class="tablinks" onclick="openTab(event, 'weather')">Weather</button>
-        </div>
+        <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+            <li class="tabs-title is-active"><a href="#add-task" aria-selected="true">Add Task</a></li>
+            <li class="tabs-title"><a href="#add-holiday">Add Holiday</a></li>
+            <li class="tabs-title"><a href="#weather">Weather</a></li>
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="collapsing-tabs">
+            <!-- Add task tab content -->
+            <div id="add-task" class="tabs-panel is-active">
+                <h3>Add Task</h3>
+                <form>
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name">
+                    <label for="task-desc">Task Description:</label>
+                    <textarea type="text" id="task-desc" name="task-desc"></textarea>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color">
+                    <input type="submit" value="Save Task">
+                </form>
+            </div>
   
-        <!-- Add task tab content -->
-        <div id="add-task" class="tabcontent">
-            <h3>Add Task</h3>
-            <form>
-                <label for="task-name">Task Name:</label>
-                <input type="text" id="task-name" name="task-name">
-                <label for="task-desc">Task Description:</label>
-                <input type="text" id="task-desc" name="task-desc">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date">
-                <label for="color">Color:</label>
-                <input type="color" id="color" name="color">
-                <input type="submit" value="Save Task">
-            </form>
-        </div>
+            <!--Add holiday tab content-->
+            <div id="add-holiday" class="tabs-panel">
+                <h3>Add Holiday</h3>
+            </div>
   
-        <!--Add holiday tab content-->
-        <div id="add-holiday" class="tabcontent">
-            <h3>Add Holiday</h3>
-        </div>
-  
-        <!--Weather tab content-->
-        <div id="weather" class="tabcontent">
-            <h3>Weather</h3>
+            <!--Weather tab content-->
+            <div id="weather" class="tabs-panel">
+                <h3>Weather</h3>
+            </div>
         </div>
     </section>
 
     <!--Task columns section-->
-    <section>
-        <!--TO DO column-->
-        <div>
-            <h2>To Do:</h2>
-            <!--tasks go in this div below-->
-            <div>
+    <section class="grid-container">
+        <div class="grid-x align-justify">
+            <!--TO DO column-->
+            <div class="cell large-4">
+                <h2 class="text-center">To Do:</h2>
+                <!--tasks go in this div below-->
                 <div>
-                    <h4>Task Name</h4>
-                    <p>Task Description</p>
-                    <time datetime="2022-04-30">04/30/2022</time>
+                    <div>
+                        <h4>Task Name</h4>
+                        <p>Task Description</p>
+                        <time datetime="2022-04-30">04/30/2022</time>
+                    </div>
+                </div>
+            </div>
+            <!--DOING column-->
+            <div class="cell large-4">
+                <h2 class="text-center">Doing:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div>
+                        <h4>Task Name</h4>
+                        <p>Task Description</p>
+                        <time datetime="2022-04-30">04/30/2022</time>
+                    </div>
+                </div>
+            </div>
+            <!--DONE column-->
+            <div class="cell large-4">
+                <h2 class="text-center">Done:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div>
+                        <h4>Task Name</h4>
+                        <p>Task Description</p>
+                        <time datetime="2022-04-30">04/30/2022</time>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--DOING column-->
-        <div>
-            <h2>Doing:</h2>
-            <!--tasks go in this div below-->
-            <div>
-
-            </div>
-        </div>
-        <!--DONE column-->
-        <div>
-            <h2>Done:</h2>
-            <!--tasks go in this div below-->
-            <div>
-
-            </div>
-        </div>
     </section>
-</body>
+    <script>
+        
+        var elem = new Foundation.Tabs($(".tabs"));
+
+    </script>
+    </body>
 </html>
