@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
 </head>
+
 <body>
-    
+    <!--Page title-->
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+
+    <!--Tabs and tab contents-->
+    <section>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'add-task')">Add Task</button>
+            <button class="tablinks" onclick="openTab(event, 'add-holiday')">Add Holiday</button>
+            <button class="tablinks" onclick="openTab(event, 'weather')">Weather</button>
+        </div>
+
+        <!-- Add task tab content -->
+        <div id="add-task" class="tabcontent">
+            <h3>Add Task</h3>
+            <form>
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" name="task-name">
+                <label for="task-desc">Task Description:</label>
+                <input type="text" id="task-desc" name="task-desc">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color">
+                <input type="submit" value="Save Task">
+            </form>
+        </div>
+
+        <!--Add holiday tab content-->
+        <div id="add-holiday" class="tabcontent">
+            <h3>Add Holiday</h3>
+        </div>
+
+        <!--Weather tab content-->
+        <div id="weather" class="tabcontent">
+            <h3>Weather</h3>
+        </div>
+    </section>
+
+    <!--Task columns section-->
+    <section>
+        <!--TO DO column-->
+        <div>
+            <h2>To Do:</h2>
+            <!--tasks go in this div below-->
+            <div>
+                <div>
+                    <h4>Task Name</h4>
+                    <p>Task Description</p>
+                    <time datetime="2022-04-30">04/30/2022</time>
+                </div>
+            </div>
+        </div>
+        <!--DOING column-->
+        <div>
+            <h2>Doing:</h2>
+            <!--tasks go in this div below-->
+            <div>
+
+            </div>
+        </div>
+        <!--DONE column-->
+        <div>
+            <h2>Done:</h2>
+            <!--tasks go in this div below-->
+            <div>
+
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
