@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/script.js" defer></script>
     <title>To-Do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    
 </head>
 
 <body>
@@ -86,37 +94,50 @@
     </section>
 
     <!--Task columns section-->
-    <section>
-        <!--TO DO column-->
-        <div>
-            <h2>To Do:</h2>
-            <!--tasks go in this div below-->
-            <div>
+    <section class="grid-container">
+        <div class="grid-x align-justify">
+            <!--TO DO column-->
+            <div class="cell large-4">
+                <h2 class="text-center">To Do:</h2>
+                <!--tasks go in this div below-->
                 <div>
-                    <h4>Task Name</h4>
-                    <p>Task Description</p>
-                    <time datetime="2022-04-30">04/30/2022</time>
+                    <div>
+                        <h4>Task Name</h4>
+                        <p>Task Description</p>
+                        <time datetime="2022-04-30">04/30/2022</time>
+                    </div>
+                </div>
+            </div>
+            <!--DOING column-->
+            <div class="cell large-4">
+                <h2 class="text-center">Doing:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div>
+                        <h4>Task Name</h4>
+                        <p>Task Description</p>
+                        <time datetime="2022-04-30">04/30/2022</time>
+                    </div>
+                </div>
+            </div>
+            <!--DONE column-->
+            <div class="cell large-4">
+                <h2 class="text-center">Done:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div>
+                        <h4>Task Name</h4>
+                        <p>Task Description</p>
+                        <time datetime="2022-04-30">04/30/2022</time>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--DOING column-->
-        <div>
-            <h2>Doing:</h2>
-            <!--tasks go in this div below-->
-            <div>
-
-            </div>
-        </div>
-        <!--DONE column-->
-        <div>
-            <h2>Done:</h2>
-            <!--tasks go in this div below-->
-            <div>
-
-            </div>
-        </div>
     </section>
+    <script>
+        
+        var elem = new Foundation.Tabs($(".tabs"));
 
-</body>
-
+    </script>
+    </body>
 </html>
