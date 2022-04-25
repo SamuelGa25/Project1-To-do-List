@@ -61,15 +61,15 @@
     
       switch (taskDataObj.status) {
       case "to do":
-        taskActionsEl.querySelector("select[name='tasks-to-do']")//.selectedIndex = 0;
+        taskActionsEl.querySelector("select[name='tasks-to-do']")
         tasksToDoEl.append(listItemEl);
         break;
       case "in progress":
-        taskActionsEl.querySelector("select[name='tasks-in-progress']")//.selectedIndex = 1;
+        taskActionsEl.querySelector("select[name='tasks-in-progress']")
         tasksInProgressEl.append(listItemEl);
         break;
       case "completed":
-        taskActionsEl.querySelector("select[name='tasks-completed']")//.selectedIndex = 2;
+        taskActionsEl.querySelector("select[name='tasks-completed']")
         tasksCompletedEl.append(listItemEl);
         break;
       default:
