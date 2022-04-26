@@ -1,5 +1,6 @@
 var weather = {
     apiKey: "4ef8bf308ae6eb4a080badb853d4b7ef",
+
     fetchWeather: function (city) {
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q="
@@ -43,6 +44,9 @@ document.querySelector(".search-bar")
         }
     });
 
+
 weather.fetchWeather("");
+
+
 
 
