@@ -1,0 +1,45 @@
+.body {
+    color: #e0f0ea;
+    background-color: #3c2a4d;
+    padding: 10px;
+}
+
+.header {
+    padding: 15px 0px 0px 20px;
+}
+
+#collapsing-tabs {
+    color: #e0f0ea;
+    background: #3c2a4d;
+    border-color: #3c2a4d;
+}
+
+.tabs li {
+    color: #e0f0ea;
+    background-color: #503a65;
+}
+
+.tabs-content {
+    color: #3c2a4d;
+    background-color: #e0f0ea;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.search {
+    color: #3c2a4d;
+    background-color: #e0f0ea;
+}
+
+.cell {
+    background-color: #95adbe;
+    border-radius: 10px;
+}
+
+.task {
+    color: #e0f0ea;
+    background-color: #503a65;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
