@@ -14,9 +14,16 @@
     border-color: #3c2a4d;
 }
 
-.tabs li {
+.tabs li a {
     color: #e0f0ea;
     background-color: #503a65;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.tabs .is-active a {
+    color: #3c2a4d;
+    background-color: #e0f0ea;
 }
 
 .tabs-content {
@@ -24,6 +31,11 @@
     background-color: #e0f0ea;
     margin-bottom: 10px;
     border-radius: 10px;
+}
+
+#task-form label {
+    color: #3c2a4d;
+
 }
 
 .search {
