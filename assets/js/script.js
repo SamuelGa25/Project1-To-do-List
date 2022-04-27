@@ -13,8 +13,8 @@
     var taskFormHandler = function (event) {
         event.preventDefault();
         var taskNameInput = document.querySelector("input[name='task-name']").value;
-        var taskDescInput = document.querySelector("input[name='task-desc']").value;
-        var taskDateInput = document.querySelector("input[name='task-date']").value;
+        var taskDescInput = document.querySelector("textarea[name='task-desc']").value;
+        var taskDateInput = document.querySelector("input[name='date']").value;
 
         // check if input values are empty strings
         if (taskNameInput === "" || taskDescInput === "" || !taskDateInput === "") {
@@ -23,8 +23,8 @@
         }
 
         document.querySelector("input[name='task-name']").value = "";
-        document.querySelector("input[name='task-desc']").value = "";
-        document.querySelector("input[name='task-date']").value = "";
+        document.querySelector("textarea[name='task-desc']").value = "";
+        document.querySelector("input[name='date']").value = "";
 
         var isEdit = formEl.hasAttribute("data-task-id");
         if (isEdit) {
