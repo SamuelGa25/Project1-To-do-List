@@ -49,10 +49,27 @@
     border-radius: 10px;
 }
 
-.task {
+.task-list {
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
     color: #e0f0ea;
     background-color: #503a65;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    list-style-type: none;
+}
+
+.edit-btn,
+.delete-btn {
+    color: #95adbe;
+    margin: 15px 20px 10px 0;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    color: #e0f0ea;
 }
