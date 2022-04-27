@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
-<body>
-    
+
+<body class="body">
+    <!--Page title-->
+    <header class="header">
+        <h1>To-Do List</h1>
+    </header>
+
+    <div id="time-api">
+
+    </div>
+
+    <!--Tabs and tab contents-->
+    <section>
+        <!-- Tab links -->
+        <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+            <li class="tabs-title is-active"><a href="#add-task" aria-selected="true">Add Task</a></li>
+            <li class="tabs-title"><a href="#weather">Weather</a></li>
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="collapsing-tabs">
+            <!-- Add task tab content -->
+            <div id="add-task" class="tabs-panel is-active">
+                <h3>Add Task</h3>
+                <form id="task-form">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name">
+                    <label for="task-desc">Task Description:</label>
+                    <textarea type="text" id="task-desc" name="task-desc"></textarea>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                    <input type="submit" id="save-task" value="Save Task">
+                </form>
+            </div>
+
+            <!--Weather tab content-->
+            <div id="weather" class="tabs-panel">
+                <h3>Weather</h3>
+                <div class="card">
+                    <div class="search">
+                        <input type="text" class="search-bar" placeholder="Search">
+                        <button id="weather-btn">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                                    clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="weather loading">
+                        <h2 class="city">Weather</h2>
+                        <h1 class="temp">75°F</h1>
+                        <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="" class="icon" />
+                        <div class="description">Cloudy</div>
+                        <div class="humidity">Humidity: 80%</div>
+                        <div class="wind">Wind Speed: 14 mph</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Task columns section-->
+    <section class="grid-container" id="page-content">
+        <div id="add-task" class="grid-x align-justify grid-margin-x grid-margin-y">
+            <!--TO DO column-->
+            <div class="cell large-4">
+                <h2 class="text-center">To Do:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div class="task">
+                        <ul class="task-list" id="tasks-to-do"></ul>
+                    </div>
+                </div>
+            </div>
+            <!--DOING column-->
+            <div class="cell large-4">
+                <h2 class="text-center">Doing:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div class="task">
+                        <ul class="task-list" id="tasks-in-progress"></ul>
+                    </div>
+                </div>
+            </div>
+            <!--DONE column-->
+            <div class="cell large-4">
+                <h2 class="text-center">Done:</h2>
+                <!--tasks go in this div below-->
+                <div>
+                    <div class="task">
+                        <ul class="task-list" id="tasks-completed"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        var elem = new Foundation.Tabs($(".tabs"));
+
+    </script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/weather.js"></script>
+    <script src="./assets/js/time.js"></script>
 </body>
+
 </html>

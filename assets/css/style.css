@@ -1,0 +1,76 @@
+.body {
+    color: #e0f0ea;
+    background-color: #3c2a4d;
+    padding: 10px;
+}
+
+.header,
+#time-api {
+    padding: 15px 0px 0px 20px;
+}
+
+#collapsing-tabs {
+    color: #e0f0ea;
+    background: #3c2a4d;
+    border-color: #3c2a4d;
+}
+
+.tabs li a {
+    color: #e0f0ea;
+    background-color: #503a65;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.tabs .is-active a,
+.weather {
+    color: #3c2a4d;
+    background-color: #e0f0ea;
+}
+
+.tabs-content {
+    color: #3c2a4d;
+    background-color: #e0f0ea;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#task-form label {
+    color: #3c2a4d;
+
+}
+
+.search {
+    color: #3c2a4d;
+    background-color: #e0f0ea;
+}
+
+.cell {
+    background-color: #95adbe;
+    border-radius: 10px;
+}
+
+.task-list {
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    color: #e0f0ea;
+    background-color: #503a65;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+.edit-btn,
+.delete-btn {
+    color: #95adbe;
+    margin: 15px 20px 10px 0;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    color: #e0f0ea;
+}
