@@ -21,7 +21,8 @@
     margin: 10px;
 }
 
-.tabs .is-active a {
+.tabs .is-active a,
+.weather {
     color: #3c2a4d;
     background-color: #e0f0ea;
 }
